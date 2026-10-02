@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gq-go-v1';
+const CACHE_NAME = 'gq-go-v2';
 
 const ASSETS_TO_CACHE = [
   './',
