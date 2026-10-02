@@ -11,8 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="GQ_GO">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icon.svg">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
@@ -773,18 +773,18 @@
         let twd67X = baseOrigin[0] + parseInt(xMap, 10) * 800;
         let twd67Y = baseOrigin[1] + parseInt(yMap, 10) * 500;
 
-        twd67X += (subX.charCodeAt(0) - 65) * 100;
+        twX = twd67X + (subX.charCodeAt(0) - 65) * 100;
         twd67Y += (subY.charCodeAt(0) - 65) * 100;
 
         if (pt.length === 2) {
-            twd67X += parseInt(pt[0], 10) * 10 + 5;
+            twX += parseInt(pt[0], 10) * 10 + 5;
             twd67Y += parseInt(pt[1], 10) * 10 + 5;
         } else if (pt.length === 4) {
-            twd67X += parseInt(pt.substring(0, 2), 10);
+            twX += parseInt(pt.substring(0, 2), 10);
             twd67Y += parseInt(pt.substring(2, 4), 10);
         }
 
-        const twd97X = twd67X + 828;
+        const twd97X = twX + 828;
         const twd97Y = twd67Y - 207;
 
         return { ...twd97ToWGS84(twd97X, twd97Y), standardCode: cleaned };
