@@ -1,8 +1,8 @@
 {
-  "id": "./",
+  "id": "./index.html",
   "name": "GQ_GO 排工導航盤",
   "short_name": "GQ_GO",
-  "start_url": "./",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f172a",
